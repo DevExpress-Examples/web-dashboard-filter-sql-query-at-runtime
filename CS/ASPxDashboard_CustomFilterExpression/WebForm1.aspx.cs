@@ -1,7 +1,6 @@
 ﻿using System;
 using DevExpress.DashboardWeb;
 using DevExpress.Data.Filtering;
-using DevExpress.DashboardCommon;
 
 namespace ASPxDashboard_CustomFilterExpression {
     public partial class WebForm1 : System.Web.UI.Page {
@@ -10,7 +9,7 @@ namespace ASPxDashboard_CustomFilterExpression {
         }
 
         protected void ASPxDashboard1_CustomFilterExpression(object sender, CustomFilterExpressionWebEventArgs e) {
-            if (e.DataSourceName == "SQL Data Source 1" && e.TableName == "Invoices") {
+            if (e.DashboardId == "dashboard1" && e.TableName == "Invoices") {
                 e.FilterExpression = new BinaryOperator("CustomerID", "AROUT", BinaryOperatorType.Equal);
             }
         }

@@ -1,1 +1,0 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="ASPxDashboard_CustomFilterExpression.Global_asax" Language="C#" %>
