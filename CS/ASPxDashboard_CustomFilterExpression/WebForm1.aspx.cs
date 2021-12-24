@@ -9,7 +9,7 @@ namespace ASPxDashboard_CustomFilterExpression {
         }
 
         protected void ASPxDashboard1_CustomFilterExpression(object sender, CustomFilterExpressionWebEventArgs e) {
-            if (e.DashboardId == "dashboard1" && e.TableName == "Invoices") {
+            if (e.DataSourceConnectionName == "nwindConnection" && e.TableName == "Invoices") {
                 e.FilterExpression = new BinaryOperator("CustomerID", "AROUT", BinaryOperatorType.Equal);
             }
         }

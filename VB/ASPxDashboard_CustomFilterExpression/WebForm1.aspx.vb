@@ -11,7 +11,7 @@ Namespace ASPxDashboard_CustomFilterExpression
 		End Sub
 
 		Protected Sub ASPxDashboard1_CustomFilterExpression(ByVal sender As Object, ByVal e As CustomFilterExpressionWebEventArgs)
-			If e.DashboardId = "dashboard1" AndAlso e.TableName = "Invoices" Then
+			If e.DataSourceConnectionName = "nwindConnection" AndAlso e.TableName = "Invoices" Then
 				e.FilterExpression = New BinaryOperator("CustomerID", "AROUT", BinaryOperatorType.Equal)
 			End If
 		End Sub
