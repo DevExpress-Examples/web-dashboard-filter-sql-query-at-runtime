@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="Dashboard" Alignment="Center" />
+  <Title Text="Dashboard" />
   <DataSources>
-    <SqlDataSource ComponentName="DataSource1">
-      <Name>SQL Data Source 1</Name>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="DataSource1">
       <Connection Name="nwindConnection" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="Invoices">
         <Tables>
@@ -13,7 +12,7 @@
           <AllColumns Table="Invoices" />
         </Columns>
       </Query>
-      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
@@ -34,7 +33,7 @@
           <Series>
             <Simple SeriesType="Spline">
               <Value DefaultId="DataItem0" />
-              <PointLabelOptions Visible="true" />
+              <PointLabelOptions ContentType="Value" />
             </Simple>
           </Series>
         </Pane>
@@ -50,6 +49,18 @@
       </SeriesDimensions>
       <Card>
         <ActualValue DefaultId="DataItem0" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="270" MaxWidth="270" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
       </Card>
     </Card>
     <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ShowCaption="false" DataSource="DataSource1" DataMember="Invoices">
