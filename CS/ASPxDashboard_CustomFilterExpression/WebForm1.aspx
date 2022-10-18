@@ -10,7 +10,7 @@
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" Width="100%" Height="100%" 
             OnCustomFilterExpression="ASPxDashboard1_CustomFilterExpression" 
-            WorkingMode="Designer">
+            WorkingMode="Viewer">
         </dx:ASPxDashboard>
     </div>
     </form>
